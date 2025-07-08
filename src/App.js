@@ -33,8 +33,6 @@ const cyberpunkTheme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Saira:wght@300;400;600;700&display=swap');
-  
   * {
     margin: 0;
     padding: 0;
@@ -47,10 +45,22 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.text};
     overflow-x: hidden;
     scroll-behavior: smooth;
+    min-height: 100vh;
+    line-height: 1.6;
   }
   
   html {
     scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${props => props.theme.fonts.primary};
+    margin: 0;
+    padding: 0;
+  }
+  
+  button {
+    font-family: ${props => props.theme.fonts.primary};
   }
   
   ::-webkit-scrollbar {
